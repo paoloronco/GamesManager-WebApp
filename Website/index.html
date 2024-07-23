@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Website</h1>
+        <input type="text" id="search" onkeyup="searchItems()" placeholder="Cerca...">
+        <div class="filters">
+            <button onclick="filterItems('all')">Tutti</button>
+            <div class="filter-group">
+                <span>Categoria:</span>
+                <button onclick="filterItems('category1')">Categoria 1</button>
+                <button onclick="filterItems('category2')">Categoria 2</button>
+            </div>
+            <div class="filter-group">
+                <span>Tipo:</span>
+                <div class="platform-filters">
+                    <button onclick="filterType('Type 1')">Type 1</button>
+                    <button onclick="filterType('Type 2')">Type 2</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <span>Posizione:</span>
+                <button onclick="filterLocation('local')">Locale</button>
+                <button onclick="filterLocation('remote')">Remoto</button>
+            </div>
+        </div>
+        <table id="itemList" class="item-list">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Tipo</th>
+                    <th>Posizione</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
